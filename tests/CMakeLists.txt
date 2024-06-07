@@ -5,6 +5,10 @@ project(lab1_tests)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Установка библиотеки времени выполнения для всех целей
+# set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+
+
 # include(FetchContent)
 # FetchContent_Declare(
 #  googletest
@@ -23,7 +27,7 @@ add_executable(
 target_link_libraries(
     ${PROJECT_NAME}
     GTest::gtest_main
-    BigArray_lib
+    BigArray_lib 
 )
 
 include(GoogleTest)
