@@ -71,4 +71,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: test-results
-        path: test_system_${{ matrix.os }}_compiler_${{ matrix.c_compiler }}.txt
+        path: build/test_system_${{ matrix.os }}_compiler_${{ matrix.c_compiler }}.txt
